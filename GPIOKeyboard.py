@@ -13,24 +13,24 @@ try:
 		'''depending on key press, turn left/right/forward/back by sending signals 
 		through GPIO pins (alter accordingly based on our raspberry pi wiring)'''
 		if keyboard.is_pressed('w'):
-			GPIO.output(13, False)
-			GPIO.output(17, True)
-			GPIO.output(27, False)
-			GPIO.output(17, True)
+			GPIO.output(13, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
+			GPIO.output(27, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
 		elif keyboard.is_pressed('a'):
-			GPIO.output(13, True)
-			GPIO.output(17, False)
-			GPIO.output(27, True)
-			GPIO.output(17, False)
+			GPIO.output(13, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
+			GPIO.output(27, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
 		elif keyboard.is_pressed('s'):
-			GPIO.output(13, True)
-			GPIO.output(17, False)
-			GPIO.output(27, False)
-			GPIO.output(17, True)
+			GPIO.output(13, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
+			GPIO.output(27, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
 		elif keyboard.is_pressed('d'):
-			GPIO.output(13, False)
-			GPIO.output(17, True)
-			GPIO.output(27, True)
-			GPIO.output(17, False)
+			GPIO.output(13, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
+			GPIO.output(27, GPIO.HIGH)
+			GPIO.output(17, GPIO.HIGH)
 except KeyboardInterrupt:
     GPIO.cleanup()
